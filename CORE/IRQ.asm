@@ -1,0 +1,17 @@
+;%pushall(0)
+REP #$30
+PHA
+SEP #$30
+LDA $4211
+BPL +
+LDA #%11110001
+STA $2106
+NOP #38
+STZ $2106
+LDA #$91
+STA $4200
++
+;%pullall(0)
+REP #$30
+PLA
+RTI
